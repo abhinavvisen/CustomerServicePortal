@@ -1,0 +1,85 @@
+<html>
+
+<script language="javascript">
+
+function check()
+{
+
+  if ( f1.device.value == "none")
+  {
+      alert("Please select the type of device!")
+      f1.device.focus()
+      return false
+  }
+
+   if ( f1.sno.value == "")
+  {
+      alert("Please enter the serial number of the device that is defective!")
+      f1.sno.focus()
+      return false
+  }
+
+ if ( f1.complaint.value == "")
+  {
+      alert("Please enter the complaint!")
+      f1.complaint.focus()
+      return false
+  }
+
+
+
+
+}
+
+</script>
+
+<style>
+h2{color:navy;font:700 20pt arial}
+h4 {color:brwon;font:700 11pt verdana}
+td {font:12pt verdana}
+a {font:12pt verdana;color:navy}
+
+</style>
+
+<body bgcolor="wheat">
+<center>
+
+<div style="color:white;background-color:maroon;font:700 25pt arial;letter-spacing:5pt">
+Customer Support System
+</div>
+
+<h2>Complaint Registration</h2>
+
+<form action="addcomplaint.jsp" method="post" name=f1>
+<table>
+<tr>
+<td>
+Complaint Type:
+<td>
+<select name="devtype">
+<option value="none">Select complaint type
+<option value="prn">Water Problem
+<option value="mon">Electricity Problem
+<option value="hdd">Hard Disk
+<option value="key">Keyboard
+</select>
+<tr>
+<td valign="top">
+Complaint
+<td>
+<textarea rows=5 name=complaint cols=50></textarea>*
+</tr>
+
+
+</table>
+<p>
+
+<input type=submit value="Register Complaint">
+<input type=reset value="Clear All">
+<p>
+<a href="home.jsp">Go Back </a>
+</form>
+
+</center>
+</body>
+</html>
